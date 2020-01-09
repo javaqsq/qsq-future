@@ -1,0 +1,42 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: test-module
+  datasource:
+    name: mytest
+    url: jdbc:mysql://127.0.0.1:3306/springboot?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+#    mysql 8.0.x
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    poolPreparedStatements: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+
+mybatis-plus:
+  mapperLocations: classpath*:/mybatis/mapper/**/*.xml
+  typeAliasesPackage: com.qsq.test.po
+  global-config:
+    db-config:
+      column-underline: true
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#      table-prefix: ssm_
+    refresh: true
+  # mybatis 原始配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+logging:
+  config: classpath:config/log4j2-dev.xml
+  path: log
