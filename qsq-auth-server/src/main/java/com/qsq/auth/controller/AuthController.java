@@ -67,9 +67,9 @@ public class AuthController {
      *
      * @return
      */
-    @PostMapping("/info/{id}")
-//    @CheckAuth(value = "hasRole('admin')")
-    @CheckAuth
+//    @PostMapping("/info/{id}")
+    @CheckAuth(value = "hasRole('admin')")
+//    @CheckAuth
     public ResultResponse getSysUserInfo(@PathVariable(value = "id") Integer id) {
         UserInfo user = userOperator.getUser();
         if (id.compareTo(user.getUserId()) != 0) {
