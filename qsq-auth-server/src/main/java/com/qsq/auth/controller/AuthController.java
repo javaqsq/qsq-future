@@ -10,6 +10,7 @@ import com.qsq.common.auth.annotation.CheckAuth;
 import com.qsq.common.auth.model.UserInfo;
 import com.qsq.common.auth.model.UserOperator;
 import com.qsq.auth.service.AuthServerService;
+import com.qsq.common.enums.ExceptionEnum;
 import com.qsq.common.exception.AuthSecurityException;
 import com.qsq.common.model.ResultResponse;
 import org.apache.commons.lang3.StringUtils;
@@ -47,7 +48,7 @@ public class AuthController {
     @PostMapping("/login")
     public ResultResponse login(@RequestBody @Valid LoginRequestDTO requestDTO) {
         UserResponseDTO responseDTO = authServerService.getUserInfoByRequestDTO(requestDTO);
-        return ResultResponse.success(responseDTO);
+        return ResultResponse.success(HttpStatus.OK.value(), "登录成功", responseDTO);
     }
 
     /**
@@ -67,20 +68,14 @@ public class AuthController {
      *
      * @return
      */
-//    @PostMapping("/info/{id}")
-    @CheckAuth(value = "hasRole('admin')")
-//    @CheckAuth
-    public ResultResponse getSysUserInfo(@PathVariable(value = "id") Integer id) {
-        UserInfo user = userOperator.getUser();
-        if (id.compareTo(user.getUserId()) != 0) {
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "你没有权限修改当前用户数据");
+    @PostMapping("/info")
+    @CheckAuth
+    public ResultResponse getSysUserInfo(@RequestBody String token) {
+        UserInfo userInfo = userOperator.getUserFromToken(token);
+        if (userInfo == null) {
+            throw ExceptionEnum.LOGIN_USER_NOT_EXIST.getException();
         }
-        SysUser sysUser = sysUserService.getById(id);
-        if (sysUser == null) {
-            return ResultResponse.fail("查不到数据");
-        } else {
-            return ResultResponse.success(sysUser);
-        }
+        return ResultResponse.success(userInfo);
     }
 
     /**

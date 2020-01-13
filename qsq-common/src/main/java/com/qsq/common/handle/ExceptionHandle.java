@@ -77,7 +77,7 @@ public class ExceptionHandle {
      * @return
      */
     @ExceptionHandler(BusinessRuntimeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.OK)
     @ResponseBody
     public ResultResponse businessError(BusinessRuntimeException e) {
         log.error(" 自定义异常出错 ", e);

@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/qsq-user/pom.xml" />
         <option value="$PROJECT_DIR$/qsq-order/pom.xml" />
         <option value="$PROJECT_DIR$/qsq-auth-server/pom.xml" />
+        <option value="$PROJECT_DIR$/qsq-file/pom.xml" />
       </list>
     </option>
   </component>

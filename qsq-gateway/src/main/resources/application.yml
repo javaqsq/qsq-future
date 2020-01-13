@@ -1,6 +1,8 @@
 server:
   port: 8888
 spring:
+  application:
+    name: gateway-module
   cloud:
     nacos:
       discovery:
@@ -11,9 +13,42 @@ spring:
         locator:
           enabled: true
           lowerCaseServiceId: true
+      routes:
+      # id : 这个是gateway中id ， 可以随便填写
+      # uri : 这个是 uri 对应的微服务的 端口 http://localhost:28080/ http://localhost:9999/
+      # predicates 匹配规则 ，上面的端口下的地址
 
-  application:
-    name: gateway
+
+      - id: test-module
+        uri: lb://test-module
+        predicates:
+        - Path=/test/**
+
+      - id: auth-module
+        uri: lb://auth-module
+        predicates:
+        - Path=/auth/**
+
+      - id: user-module
+        uri: lb://user-module
+        predicates:
+        - Path=/user/**
+
+      - id: order-module
+        uri: lb://order-module
+        predicates:
+        - Path=/order/**
+
+      - id: file-module
+        uri: lb://file-module
+        predicates:
+        - Path=/file/**
+
+
+
+
+
+
 management:
   endpoints:
     web:

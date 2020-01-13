@@ -14,6 +14,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -39,6 +40,7 @@ public class UserOperator {
 
     /**
      * 获取当前登录用户信息
+     * 为什么要保存在attribute , 可以让会话中省点操作
      *
      * @return 用户信息
      */
@@ -46,17 +48,13 @@ public class UserOperator {
         try {
             HttpServletRequest request = getRequest();
             String token = getTokenFromRequest(request);
-            Boolean isValid = jwtOperator.validateToken(token);
-            if (!isValid) {
-                return null;
-            }
             Object userInReq = request.getAttribute(SECURITY_REQ_ATTR_USER);
             if (userInReq != null) {
                 return (UserInfo) userInReq;
             }
-            UserInfo user = getUserFromToken(request);
-            request.setAttribute(SECURITY_REQ_ATTR_USER, user);
-            return user;
+            UserInfo userInfo = getUserFromToken(token);
+            request.setAttribute(SECURITY_REQ_ATTR_USER, userInfo);
+            return userInfo;
         } catch (Exception e) {
             log.info("发生异常", e);
             throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), e.getMessage());
@@ -65,13 +63,17 @@ public class UserOperator {
 
 
     /**
-     * 从token中获取当前用户的信息
+     * 解析token，获得用户信息
      *
-     * @param request
-     * @return
+     * @param token token
+     * @return 用户信息
      */
-    public UserInfo getUserFromToken(HttpServletRequest request) {
-        String token = getTokenFromRequest(request);
+    @SuppressWarnings("unchecked")
+    public UserInfo getUserFromToken(String token) {
+        Boolean isValid = jwtOperator.validateToken(token);
+        if (!isValid) {
+            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "token失效");
+        }
         Claims claimsMap = jwtOperator.getClaimsFromToken(token);
         UserInfo userInfo = new UserInfo();
         try {

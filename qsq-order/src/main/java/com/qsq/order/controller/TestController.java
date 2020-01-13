@@ -43,18 +43,7 @@ public class TestController {
     )
     public ResultResponse getOrder(@PathVariable("id") Integer id) {
         log.info("id : {}", id);
-        // 2.设置用户信息
-        if (id == 1) {
-            throw ExceptionEnum.LOGIN_USER_NOT_EXIST.getException();
-        }
-        HashMap<String, Object> objectObjectHashMap = Maps.newHashMap();
-        objectObjectHashMap.put("id", "1");
-        // 测试1: 生成token
-        if (id == 2) {
-            throw ExceptionEnum.LOGIN_USER_NOT_EXIST.getException();
-        }
         return userModuleFeign.getUserInfo(id);
-//        return ResultResponse.success(xToken);
     }
 
 

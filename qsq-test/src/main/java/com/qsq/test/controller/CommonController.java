@@ -1,23 +1,20 @@
 package com.qsq.test.controller;
 
+import cn.hutool.captcha.CaptchaUtil;
+import cn.hutool.captcha.ShearCaptcha;
 import com.qsq.common.enums.ExceptionEnum;
 import com.qsq.common.model.ResultResponse;
 import com.qsq.common.uitl.RandomImageGenerator;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.awt.*;
-import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
 import java.io.IOException;
-import java.util.Random;
 
 /**
  * @author QSQ
@@ -26,12 +23,12 @@ import java.util.Random;
  * 〈〉
  */
 @RestController
-@RequestMapping("/common")
+@RequestMapping("/test")
 public class CommonController {
 
     @GetMapping("/code")
-    public ResultResponse code(@RequestParam(value = "username") String username) {
-        return ResultResponse.success(username + "5555");
+    public ResultResponse code(HttpServletResponse response) {
+        return ResultResponse.success();
     }
 
 

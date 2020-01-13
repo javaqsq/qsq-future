@@ -28,8 +28,8 @@ public class TestController {
         throw ExceptionEnum.EXIST_SAME_USERNAME.getException();
     }
 
-    @GetMapping("{id}")
-    public ResultResponse info(@PathVariable Integer id) {
+    @GetMapping("/{id}")
+    public ResultResponse info(@PathVariable("id") Integer id) {
         SysUser sysUser = sysUserService.getById(id);
         return ResultResponse.success(sysUser);
     }

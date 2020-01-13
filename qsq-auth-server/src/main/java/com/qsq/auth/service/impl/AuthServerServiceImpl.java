@@ -10,10 +10,14 @@ import com.qsq.auth.po.SysUser;
 import com.qsq.auth.service.AuthServerService;
 import com.qsq.common.enums.ExceptionEnum;
 import com.qsq.common.jwt.JwtOperator;
+import com.qsq.common.uitl.RedisUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author QSQ
@@ -22,6 +26,7 @@ import java.util.Map;
  * 〈〉
  */
 @Service
+@Slf4j
 public class AuthServerServiceImpl implements AuthServerService {
 
     @Autowired
@@ -32,6 +37,11 @@ public class AuthServerServiceImpl implements AuthServerService {
 
     @Autowired
     private JwtOperator jwtOperator;
+
+    @Autowired
+    private RedisUtils redisUtils;
+
+    private static final String TOKEN_PREFIX = "login:token-";
 
 
     /**
@@ -52,6 +62,9 @@ public class AuthServerServiceImpl implements AuthServerService {
         List<String> roles = authServerMapper.getUserRoleByUserId(sysUser.getUserId());
         Map<String, Object> claims = initTokenMap(sysUser, roles);
         String token = jwtOperator.generateToken(claims);
+        // 默认保存两周 , 如果这边改了 , jwt也得改 ,还需要优化
+        redisUtils.set(TOKEN_PREFIX + sysUser.getUsername(), token, 1209600, TimeUnit.SECONDS);
+        log.info(" 用户{} ,登录成功 ! token : {}", sysUser.getUsername(), token);
         return UserResponseDTO.builder()
                 .userId(sysUser.getUserId())
                 .username(sysUser.getUsername())

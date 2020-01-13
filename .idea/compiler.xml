@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="qsq-auth-server" />
         <module name="qsq-common" />
+        <module name="qsq-file" />
         <module name="qsq-gateway" />
         <module name="qsq-generator" />
         <module name="qsq-order" />

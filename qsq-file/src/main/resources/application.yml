@@ -1,0 +1,23 @@
+
+server:
+  port: 19010
+
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+      name: user-module
+
+# \u6587\u4EF6\u4E0A\u4F20\u7684\u914D\u7F6E
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+
+file:
+  upload-dir: ./uploads

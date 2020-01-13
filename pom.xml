@@ -26,6 +26,7 @@
         <module>qsq-user</module>
         <module>qsq-order</module>
         <module>qsq-auth-server</module>
+        <module>qsq-file</module>
     </modules>
 
 
