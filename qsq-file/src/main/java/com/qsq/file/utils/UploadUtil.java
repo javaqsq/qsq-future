@@ -1,5 +1,7 @@
 package com.qsq.file.utils;
 
+import com.qsq.file.constant.ConstantFilePath;
+
 import java.io.File;
 
 /**
@@ -11,19 +13,14 @@ import java.io.File;
 public class UploadUtil {
 
     // 项目根路径下的目录  -- SpringBoot static 目录相当于是根路径下（SpringBoot 默认）
+
     /**
      * 头像路径
      */
-    public final static String AVATAR_PATH_PREFIX = "avatar";
-
     public static File getAvatarDirFile() {
-
-        // 构建上传文件的存放 "文件夹" 路径
-        String fileDirPath = "E:\\java-code\\future-project-shop\\file-path\\" + AVATAR_PATH_PREFIX;
-
+        String fileDirPath = ConstantFilePath.STATIC_FILE_PREFIX_PATH + ConstantFilePath.AVATAR_PATH_PREFIX;
         File fileDir = new File(fileDirPath);
         if (!fileDir.exists()) {
-            // 递归生成文件夹
             fileDir.mkdirs();
         }
         return fileDir;

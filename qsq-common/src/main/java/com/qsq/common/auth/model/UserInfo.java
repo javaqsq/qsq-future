@@ -19,18 +19,24 @@ import java.util.List;
 @NoArgsConstructor
 public class UserInfo {
 
-    private Integer userId ;
+    private Integer userId;
 
-    private String username ;
+    private String username;
+    /**
+     * 头像
+     */
+    private String avatar;
 
-    private String nickname ;
+    private String nickname;
     /**
      * 角色
      */
-    private List<String> roles ;
+    private List<String> roles;
 
-
-
+    /**
+     * 版本号控制当前jwt的用户信息是否有效
+     */
+    private String version;
 
 
 }

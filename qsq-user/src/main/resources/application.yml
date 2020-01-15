@@ -1,5 +1,5 @@
 server:
-  port: 18080
+  port: 18090
 spring:
   cloud:
     nacos:
@@ -38,3 +38,9 @@ mybatis-plus:
 logging:
   config: classpath:config/log4j2-dev.xml
   path: log
+
+jwt:
+  #长度不能太小
+  secret: qsqbbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrsssttt
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600

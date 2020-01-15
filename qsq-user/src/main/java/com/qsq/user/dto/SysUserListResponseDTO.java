@@ -1,32 +1,37 @@
-package com.qsq.auth.dto;
+package com.qsq.user.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.NotBlank;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author QSQ
- * @create 2020/1/6 21:46
+ * @create 2020/1/15 19:49
  * No, again
- * 〈登录请求〉
+ * 〈用户管理返回参数〉
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class RegisterRequestDTO {
+public class SysUserListResponseDTO {
 
-    @NotBlank(message = "用户名不能为空")
+    private Integer userId;
+
+    /**
+     * 用户名
+     */
     private String username;
 
-    @NotBlank(message = "密码不能为空")
-    private String password;
+
+    /**
+     * 头像
+     */
+    private String avatar;
 
     /**
      * 昵称
@@ -40,10 +45,7 @@ public class RegisterRequestDTO {
 
     /**
      * 生日
-     * 如果是时间的话 ， 加上
      */
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date birthday;
 
     /**
@@ -66,8 +68,10 @@ public class RegisterRequestDTO {
      */
     private String address;
 
-    /**
-     * 头像
-     */
-    private String avatar;
+
+    private String roles;
+
+    private String roleNames;
+
+
 }

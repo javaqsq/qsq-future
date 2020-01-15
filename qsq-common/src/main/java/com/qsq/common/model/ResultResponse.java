@@ -1,12 +1,14 @@
 package com.qsq.common.model;
 
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qsq.common.enums.ExceptionEnum;
 import com.qsq.common.enums.ResultEnum;
 import com.qsq.common.uitl.IDGenerator;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author QSQ
@@ -71,6 +73,11 @@ public class ResultResponse implements Serializable {
 
     public static ResultResponse returnByEnum(ResultEnum resultEnum, Object data) {
         return new ResultResponse(true, resultEnum.getCode(), resultEnum.getValue(), data);
+    }
+
+    public static <T> ResultResponse successPage(Page<T> page ,List<T> list){
+        return new ResultResponse(true, ResultEnum.OPERATE_SUCCESS.getCode(),
+                ResultEnum.OPERATE_SUCCESS.getValue(), page.setRecords(list));
     }
 
 }

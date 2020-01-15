@@ -15,4 +15,12 @@ public interface ConstantsSecurity {
      * Bearer header
      */
     String BEARER = "Bearer ";
+
+
+    int EXPIRE_TIME = 1209600;
+
+    /**
+     * redis中保存的头部 + username
+     */
+    String TOKEN_PREFIX = "login:token-";
 }

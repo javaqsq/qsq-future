@@ -1,7 +1,9 @@
 package com.qsq.auth.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.qsq.common.model.BaseEntity;
@@ -23,7 +25,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Builder
 public class SysUser extends BaseEntity {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     @TableId(value = "user_id", type = IdType.AUTO)
     private Integer userId;
@@ -37,6 +39,11 @@ public class SysUser extends BaseEntity {
      * 密码
      */
     private String password;
+
+    /**
+     * 头像
+     */
+    private String avatar;
 
     /**
      * 昵称

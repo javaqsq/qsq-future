@@ -9,7 +9,7 @@ spring:
       discovery:
         server-addr: localhost:8848
   application:
-      name: user-module
+      name: file-module
 
 # \u6587\u4EF6\u4E0A\u4F20\u7684\u914D\u7F6E
   servlet:
@@ -21,3 +21,10 @@ spring:
 
 file:
   upload-dir: ./uploads
+
+#
+jwt:
+  #长度不能太小
+  secret: qsqbbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrsssttt
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600

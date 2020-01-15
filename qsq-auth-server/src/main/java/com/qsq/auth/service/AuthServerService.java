@@ -22,4 +22,8 @@ public interface AuthServerService {
     UserResponseDTO getUserInfoByRequestDTO(LoginRequestDTO requestDTO);
 
 
+    /**
+     * 登出
+     */
+    void logout();
 }

@@ -1,7 +1,9 @@
 package com.qsq.user.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.qsq.common.model.BaseEntity;
 import lombok.Data;
@@ -21,7 +23,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SysUser extends BaseEntity {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     @TableId(value = "user_id", type = IdType.AUTO)
     private Integer userId;
@@ -35,6 +37,12 @@ public class SysUser extends BaseEntity {
      * 密码
      */
     private String password;
+
+
+    /**
+     * 头像
+     */
+    private String avatar;
 
     /**
      * 昵称

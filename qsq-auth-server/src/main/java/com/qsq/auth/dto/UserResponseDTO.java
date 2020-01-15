@@ -25,6 +25,11 @@ public class UserResponseDTO {
 
     private String nickname ;
 
+    /**
+     * 头像
+     */
+    private String avatar;
+
     private String token ;
 
     private List<String> roles ;

@@ -37,17 +37,15 @@ public class TestController {
 
 
     @PostMapping("/uploadFile")
-    public ResultResponse uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public ResultResponse uploadFile(@RequestParam("file") MultipartFile file) {
         //判断非空
         if (file.isEmpty()) {
             return ResultResponse.fail("上传的文件不能为空");
         }
-        String filename = DateUtil.format(new Date(),"yyyyMMddHHmmss") + file.getOriginalFilename();
-
+        String filename = DateUtil.format(new Date(), "yyyyMMddHHmmss") + file.getOriginalFilename();
         // 存放上传图片的文件夹
         File fileDir = UploadUtil.getAvatarDirFile();
         // 输出文件夹绝对路径  -- 这里的绝对路径是相当于当前项目的路径而不是“容器”路径
-        System.out.println();
         log.info("文件路径: {}", fileDir.getAbsolutePath());
         try {
             // 构建真实的文件路径
@@ -55,10 +53,10 @@ public class TestController {
             log.info("生成文件路径: {}", newFile.getAbsolutePath());
             // 上传图片到 -》 “绝对路径”
             file.transferTo(newFile);
+            return ResultResponse.success(newFile.getAbsolutePath());
         } catch (IOException e) {
-            e.printStackTrace();
+            return ResultResponse.fail("文件上传失败");
         }
-        return ResultResponse.success("上传成功");
     }
 
 }

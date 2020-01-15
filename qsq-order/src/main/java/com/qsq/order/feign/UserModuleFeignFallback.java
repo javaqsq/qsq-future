@@ -1,6 +1,7 @@
 package com.qsq.order.feign;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
+import com.qsq.common.exception.AuthSecurityException;
 import com.qsq.common.exception.BusinessRuntimeException;
 import com.qsq.common.model.ResultResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -20,18 +21,14 @@ public class UserModuleFeignFallback {
             log.error("出现", ((BusinessRuntimeException) e).getErrorMsg());
             return ResultResponse.fail(((BusinessRuntimeException) e).getErrorCode(), ((BusinessRuntimeException) e).getErrorMsg());
         }
-        return ResultResponse.fail(800, "服务出现熔断");
+        return ResultResponse.fail(800, e.getMessage());
     }
 
 
     public static ResultResponse globalBlockHandler(BlockException ex) {
         System.out.println("Oops: " + ex.getClass().getSimpleName());
-        return  ResultResponse.fail(800, "服务出现熔断");
+        return ResultResponse.fail(800, "服务出现熔断");
     }
-
-
-
-
 
 
 }

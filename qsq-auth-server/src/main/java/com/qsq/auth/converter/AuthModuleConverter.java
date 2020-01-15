@@ -3,6 +3,7 @@ package com.qsq.auth.converter;
 import com.qsq.auth.dto.RegisterRequestDTO;
 import com.qsq.auth.po.SysUser;
 import lombok.experimental.UtilityClass;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author QSQ
@@ -12,6 +13,8 @@ import lombok.experimental.UtilityClass;
  */
 @UtilityClass
 public class AuthModuleConverter {
+
+    private final static String DEFAULT_AVATAR_URI = "E:/java-code/future-project-shop/file-path/avatar/20200113225310dota2剑圣.jpg";
 
     /**
      * 转换
@@ -30,6 +33,7 @@ public class AuthModuleConverter {
                 .email(requestDTO.getEmail())
                 .lockSign(requestDTO.getLockSign())
                 .address(requestDTO.getAddress())
+                .avatar(StringUtils.isEmpty(requestDTO.getAvatar()) ? DEFAULT_AVATAR_URI : requestDTO.getAvatar())
                 .build();
 
     }

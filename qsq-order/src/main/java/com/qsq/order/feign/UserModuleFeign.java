@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * No, again
  * 〈〉
  */
-@FeignClient(name = "user-module" )
+@FeignClient(name = "user-module", configuration = {FeignConfig.class})
 @Component
 public interface UserModuleFeign {
 

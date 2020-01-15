@@ -1,16 +1,18 @@
 package com.qsq.common.auth.model;
 
+import cn.hutool.json.JSONUtil;
+import com.qsq.common.auth.enums.AuthSecurityEnum;
 import com.qsq.common.exception.AuthSecurityException;
 import com.qsq.common.auth.constants.ConstantsSecurity;
 import com.qsq.common.jwt.JwtOperator;
 import com.qsq.common.uitl.ClassUtils;
-import com.qsq.common.uitl.CollectionUtils;
+import com.qsq.common.uitl.RedisUtils;
 import io.jsonwebtoken.Claims;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -36,7 +38,7 @@ public class UserOperator {
      */
     private JwtOperator jwtOperator;
     private static final int SEVEN = 7;
-
+    private RedisUtils redisUtils;
 
     /**
      * 获取当前登录用户信息
@@ -52,6 +54,7 @@ public class UserOperator {
             if (userInReq != null) {
                 return (UserInfo) userInReq;
             }
+            // 会实现检验token的版本
             UserInfo userInfo = getUserFromToken(token);
             request.setAttribute(SECURITY_REQ_ATTR_USER, userInfo);
             return userInfo;
@@ -72,18 +75,26 @@ public class UserOperator {
     public UserInfo getUserFromToken(String token) {
         Boolean isValid = jwtOperator.validateToken(token);
         if (!isValid) {
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "token失效");
+            throw AuthSecurityEnum.TOKEN_EXPIRED.getException();
         }
         Claims claimsMap = jwtOperator.getClaimsFromToken(token);
-        UserInfo userInfo = new UserInfo();
+        UserInfo jwtUserInfo = new UserInfo();
         try {
-            Field[] fields = userInfo.getClass().getDeclaredFields();
-            Arrays.stream(fields).forEach(field -> ClassUtils.fillFieldValue(userInfo, field, claimsMap.get(field.getName())));
+            Field[] fields = jwtUserInfo.getClass().getDeclaredFields();
+            Arrays.stream(fields).forEach(field -> ClassUtils.fillFieldValue(jwtUserInfo, field, claimsMap.get(field.getName())));
         } catch (Exception e) {
             log.error("设置userInfo信息时反射异常", e);
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "设置token反射异常");
+            throw AuthSecurityEnum.REFLECT_TOKEN_ERROR.getException();
         }
-        return userInfo;
+        String jsonString = redisUtils.get(ConstantsSecurity.TOKEN_PREFIX + jwtUserInfo.getUsername());
+        if (StringUtils.isEmpty(jsonString)) {
+            throw AuthSecurityEnum.TOKEN_EXPIRED.getException();
+        }
+        RedisUserInfo redisUserInfo = JSONUtil.toBean(jsonString, RedisUserInfo.class);
+        if (!StringUtils.equals(jwtUserInfo.getVersion(), redisUserInfo.getVersion())) {
+            throw AuthSecurityEnum.REDIS_JWT_NOT_SAME.getException();
+        }
+        return jwtUserInfo;
     }
 
     /**
@@ -96,13 +107,13 @@ public class UserOperator {
 
         String header = request.getHeader(ConstantsSecurity.AUTHORIZATION_HEADER);
         if (StringUtils.isEmpty(header)) {
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "没有找到名为Authorization的header");
+            throw AuthSecurityEnum.MISS_AUTHORIZATION_HEADER.getException();
         }
         if (!header.startsWith(ConstantsSecurity.BEARER)) {
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "token必须以'Bearer '开头");
+            throw AuthSecurityEnum.MISS_BEARER_HEADER.getException();
         }
         if (header.length() <= SEVEN) {
-            throw new AuthSecurityException(HttpStatus.UNAUTHORIZED.value(), "token非法，长度 <= 7");
+            throw AuthSecurityEnum.TOKEN_LENGTH_ERROR.getException();
         }
         return header.substring(SEVEN);
     }

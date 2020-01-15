@@ -39,7 +39,7 @@ public enum ExceptionEnum {
     LOGIN_ERROR_CLIENT_ID_MISS(200002, "ClientId对应的配置信息不存在"),
     LOGIN_ERROR_CLIENT_NOT_MATCH(200003, "clientSecret不匹配"),
 
-    IMAGE_CODE_GENERATOR(300001,"生成图片出错"),
+    IMAGE_CODE_GENERATOR(300001, "生成图片出错"),
 
     /**
      * 业务相关
@@ -49,7 +49,17 @@ public enum ExceptionEnum {
     LOGIN_USERNAME_EMPTY(300003, "用户名不能为空"),
     LOGIN_USER_NOT_EXIST(300004, "用户不存在"),
     LOGIN_USER_NAME_OR_PWD_ERROR(300006, "用户或者密码错误"),
-    LOGIN_PASSWORD_ERROR(300005, "密码错误"),;
+    LOGIN_PASSWORD_ERROR(300005, "密码错误"),
+
+    /**
+     * 文件上传相关
+     */
+    UPLOAD_FILE_IS_EMPTY(400001, "上传的文件不能为空"),
+    UPLOAD_FILE_ERROR(400002, "上传的文件上传失败"),
+    UPLOAD_FILE_SUFFIX_NOT_MATCH(400003, "上传文件格式不对"),
+
+
+    ;
     private Integer code;
     private String value;
 
