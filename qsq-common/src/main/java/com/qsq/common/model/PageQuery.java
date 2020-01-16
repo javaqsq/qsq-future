@@ -17,12 +17,12 @@ public class PageQuery {
     /**
      * 一页的大小
      */
-    private Long size = 15L;
+    private Long limit = 15L;
 
 
     /**
      * 查询第几页
      */
-    private Long current = 1L;
+    private Long page = 1L;
 
 }

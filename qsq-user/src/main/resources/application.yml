@@ -20,6 +20,18 @@ spring:
     initialSize: 1
     maxWait: 60000
     poolPreparedStatements: true
+#redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: redis-1.0
+    timeout: 15000ms
+    pool:
+      min-idle: 0
+      max-idle: 18
+      max-active: 18
+      timeout: 15000
+      expire: 600
 mybatis-plus:
   mapperLocations: classpath*:/mapper/**/*.xml
   typeAliasesPackage: com.qsq.user.po

@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @param <D> service
  * @param <T> 对象
  * @author qsq
- * @date  2019年10月16日21:07:34
+ * @date 2019年10月16日21:07:34
  */
 public class BaseController<D extends IService<T>, T> {
 
@@ -29,8 +29,8 @@ public class BaseController<D extends IService<T>, T> {
      */
     protected <P, Q extends PageQuery> Page<P> converterDTOToPageInit(Q q) {
         Page<P> page = new Page<>();
-        page.setCurrent(q.getCurrent());
-        page.setSize(q.getSize());
+        page.setCurrent(q.getPage());
+        page.setSize(q.getLimit());
         return page;
     }
 }

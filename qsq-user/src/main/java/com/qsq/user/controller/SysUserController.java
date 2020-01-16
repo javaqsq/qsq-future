@@ -33,10 +33,17 @@ public class SysUserController extends BaseController<SysUserService, SysUser> {
      * @return
      */
     @PostMapping("/list")
-//    @CheckAuth("hasRole('admin')")
+    @CheckAuth("hasRole('admin')")
     public ResultResponse list(@RequestBody SysUserListRequestDTO requestDTO) {
         Page<SysUserListResponseDTO> page = super.converterDTOToPageInit(requestDTO);
-        return ResultResponse.successPage(page,service.sysUserList(page,requestDTO));
+        return ResultResponse.successPage(page, service.sysUserList(page, requestDTO));
+    }
+
+    @GetMapping("/{id}")
+    @CheckAuth("hasRole('admin')")
+    public ResultResponse info(@PathVariable("id") Integer id) {
+        SysUser user = service.getById(id);
+        return ResultResponse.success(user);
     }
 
 
