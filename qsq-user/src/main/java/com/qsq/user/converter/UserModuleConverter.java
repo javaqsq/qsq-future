@@ -1,7 +1,7 @@
-package com.qsq.auth.converter;
+package com.qsq.user.converter;
 
-import com.qsq.auth.dto.RegisterRequestDTO;
-import com.qsq.auth.po.SysUser;
+import com.qsq.user.dto.RegisterRequestDTO;
+import com.qsq.user.po.SysUser;
 import lombok.experimental.UtilityClass;
 import org.apache.commons.lang3.StringUtils;
 
@@ -12,7 +12,7 @@ import org.apache.commons.lang3.StringUtils;
  * 〈〉
  */
 @UtilityClass
-public class AuthModuleConverter {
+public class UserModuleConverter {
 
     private final static String DEFAULT_AVATAR_URI = "E:/java-code/future-project-shop/file-path/avatar/20200113225310dota2剑圣.jpg";
 

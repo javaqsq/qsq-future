@@ -6,8 +6,7 @@ import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.qsq.common.model.BaseEntity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 /**
@@ -20,7 +19,9 @@ import lombok.experimental.Accessors;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Accessors(chain = true)
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class SysUser extends BaseEntity {
 
     private static final long serialVersionUID = 1L;

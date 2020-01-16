@@ -1,9 +1,13 @@
 package com.qsq.user.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qsq.common.auth.annotation.CheckAuth;
+import com.qsq.common.auth.enums.AuthSecurityEnum;
 import com.qsq.common.model.ResultResponse;
+import com.qsq.user.converter.UserModuleConverter;
+import com.qsq.user.dto.RegisterRequestDTO;
 import com.qsq.user.dto.SysUserListRequestDTO;
 import com.qsq.user.dto.SysUserListResponseDTO;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +15,7 @@ import com.qsq.user.po.SysUser;
 import com.qsq.user.service.SysUserService;
 import com.qsq.common.model.BaseController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -44,6 +49,35 @@ public class SysUserController extends BaseController<SysUserService, SysUser> {
     public ResultResponse info(@PathVariable("id") Integer id) {
         SysUser user = service.getById(id);
         return ResultResponse.success(user);
+    }
+
+    /**
+     * 注册用户
+     *
+     * @param registerRequestDTO
+     * @return
+     */
+    @PostMapping("/register")
+    public ResultResponse register(@RequestBody @Valid RegisterRequestDTO registerRequestDTO) {
+        // 验证username
+        QueryWrapper<SysUser> usernameWrapper = new QueryWrapper<SysUser>()
+                .eq("username", registerRequestDTO.getUsername());
+        SysUser usernameUser = service.getOne(usernameWrapper);
+        if (usernameUser != null) {
+            throw AuthSecurityEnum.USERNAME_ALREADY_EXIST.getException();
+        }
+        QueryWrapper<SysUser> mobileWrapper = new QueryWrapper<SysUser>()
+                .eq("mobile", registerRequestDTO.getMobile());
+        SysUser mobileUser = service.getOne(mobileWrapper);
+        if (mobileUser != null) {
+            throw AuthSecurityEnum.MOBILE_ALREADY_EXIST.getException();
+        }
+        SysUser sysUser = UserModuleConverter.registerToSysUser(registerRequestDTO);
+        if (service.save(sysUser)) {
+            return ResultResponse.success("注册成功");
+        } else {
+            return ResultResponse.fail("注册失败");
+        }
     }
 
 
