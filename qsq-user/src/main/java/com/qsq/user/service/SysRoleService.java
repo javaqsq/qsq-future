@@ -1,7 +1,7 @@
-package com.qsq.auth.service;
+package com.qsq.user.service;
 
-import com.qsq.auth.po.SysRole;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.qsq.user.po.SysRole;
 
 /**
  * <p>

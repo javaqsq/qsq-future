@@ -1,5 +1,6 @@
 package com.qsq.user.converter;
 
+import com.qsq.common.auth.model.UserInfo;
 import com.qsq.user.dto.RegisterRequestDTO;
 import com.qsq.user.po.SysUser;
 import lombok.experimental.UtilityClass;
@@ -20,10 +21,11 @@ public class UserModuleConverter {
      * 转换
      *
      * @param requestDTO
+     * @param userInfo
      * @return
      */
-    public SysUser registerToSysUser(RegisterRequestDTO requestDTO) {
-        return SysUser.builder()
+    public SysUser registerToSysUser(RegisterRequestDTO requestDTO, UserInfo userInfo) {
+        SysUser sysUser = SysUser.builder()
                 .username(requestDTO.getUsername())
                 .password(requestDTO.getPassword())
                 .nickname(requestDTO.getNickname())
@@ -35,6 +37,8 @@ public class UserModuleConverter {
                 .address(requestDTO.getAddress())
                 .avatar(StringUtils.isEmpty(requestDTO.getAvatar()) ? DEFAULT_AVATAR_URI : requestDTO.getAvatar())
                 .build();
+        sysUser.setCreateUser(userInfo.getUserId());
+        return sysUser;
 
     }
 

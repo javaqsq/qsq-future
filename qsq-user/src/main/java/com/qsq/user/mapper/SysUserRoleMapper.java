@@ -1,7 +1,7 @@
-package com.qsq.auth.mapper;
+package com.qsq.user.mapper;
 
-import com.qsq.auth.po.SysUserRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.qsq.user.po.SysUserRole;
 
 /**
  * <p>

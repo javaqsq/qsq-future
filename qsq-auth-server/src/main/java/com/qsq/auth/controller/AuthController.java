@@ -31,9 +31,6 @@ public class AuthController {
     @Autowired
     private UserOperator userOperator;
 
-    @Autowired
-    private SysUserService sysUserService;
-
     /**
      * 用户登录
      *

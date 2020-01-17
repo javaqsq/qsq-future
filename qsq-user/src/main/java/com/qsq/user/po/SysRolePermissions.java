@@ -1,4 +1,4 @@
-package com.qsq.auth.po;
+package com.qsq.user.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 
 /**
  * <p>
- * 用户角色表
+ * 角色权限表
  * </p>
  *
  * @author qsq
@@ -18,7 +18,7 @@ import lombok.experimental.Accessors;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
-public class SysUserRole extends BaseEntity {
+public class SysRolePermissions extends BaseEntity {
 
     private static final long serialVersionUID=1L;
 

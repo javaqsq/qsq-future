@@ -1,9 +1,10 @@
-package com.qsq.auth.service.impl;
+package com.qsq.user.service.impl;
 
-import com.qsq.auth.po.SysUserRole;
-import com.qsq.auth.mapper.SysUserRoleMapper;
-import com.qsq.auth.service.SysUserRoleService;
+
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.qsq.user.mapper.SysUserRoleMapper;
+import com.qsq.user.po.SysUserRole;
+import com.qsq.user.service.SysUserRoleService;
 import org.springframework.stereotype.Service;
 
 /**

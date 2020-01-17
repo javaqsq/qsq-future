@@ -5,6 +5,7 @@
     <select id="sysUserList" resultType="com.qsq.user.dto.SysUserListResponseDTO">
 
         select su.*
+        ,( select u.nickname from sys_user u where u.user_id =su.create_user ) as createUserName
         ,GROUP_CONCAT( sr.role_name SEPARATOR  ',' ) as roles
         ,GROUP_CONCAT( sr.description SEPARATOR  ',' ) as roleNames
         from sys_user su
@@ -23,7 +24,7 @@
           and EXISTS ( select 1 from sys_user su1
           left join sys_user_role sur on su1.user_id = sur.user_id
           left join sys_role sr on sr.role_id = sur.role_id
-          where sr.description like  CONCAT('%',#{requestDTO.role},'%')
+          where sr.description = #{requestDTO.role}
           and su1.user_id = su.user_id )
         </if>
         </where>

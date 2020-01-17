@@ -1,9 +1,11 @@
 package com.qsq.user.dto;
 
+import com.qsq.common.model.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 import java.util.List;
@@ -18,7 +20,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class SysUserListResponseDTO {
+public class SysUserListResponseDTO  extends BaseEntity {
 
     private Integer userId;
 
@@ -73,5 +75,6 @@ public class SysUserListResponseDTO {
 
     private String roleNames;
 
+    private String createUserName;
 
 }

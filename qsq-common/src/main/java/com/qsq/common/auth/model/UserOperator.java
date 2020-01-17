@@ -32,7 +32,6 @@ import java.util.Arrays;
 @Component
 public class UserOperator {
 
-    private static final String SECURITY_REQ_ATTR_USER = "security-user";
     /**
      * 用构造方法可以实现自动注入
      */
@@ -50,13 +49,13 @@ public class UserOperator {
         try {
             HttpServletRequest request = getRequest();
             String token = getTokenFromRequest(request);
-            Object userInReq = request.getAttribute(SECURITY_REQ_ATTR_USER);
+            Object userInReq = request.getAttribute(ConstantsSecurity.SECURITY_REQ_ATTR_USER);
             if (userInReq != null) {
                 return (UserInfo) userInReq;
             }
             // 会实现检验token的版本
             UserInfo userInfo = getUserFromToken(token);
-            request.setAttribute(SECURITY_REQ_ATTR_USER, userInfo);
+            request.setAttribute(ConstantsSecurity.SECURITY_REQ_ATTR_USER, userInfo);
             return userInfo;
         } catch (Exception e) {
             log.info("发生异常", e);

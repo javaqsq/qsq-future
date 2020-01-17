@@ -1,4 +1,4 @@
-package com.qsq.auth.po;
+package com.qsq.user.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

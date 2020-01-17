@@ -1,9 +1,10 @@
-package com.qsq.auth.service.impl;
+package com.qsq.user.service.impl;
 
-import com.qsq.auth.po.SysPermissions;
-import com.qsq.auth.mapper.SysPermissionsMapper;
-import com.qsq.auth.service.SysPermissionsService;
+
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.qsq.user.mapper.SysPermissionsMapper;
+import com.qsq.user.po.SysPermissions;
+import com.qsq.user.service.SysPermissionsService;
 import org.springframework.stereotype.Service;
 
 /**

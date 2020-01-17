@@ -23,4 +23,9 @@ public interface ConstantsSecurity {
      * redis中保存的头部 + username
      */
     String TOKEN_PREFIX = "login:token-";
+
+    /**
+     * 保存在会话中的key
+     */
+    String SECURITY_REQ_ATTR_USER = "security-user";
 }
