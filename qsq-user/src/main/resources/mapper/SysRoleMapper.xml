@@ -2,4 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qsq.user.mapper.SysRoleMapper">
 
+    <select id="getRoleList" resultType="com.qsq.user.dto.RoleListResponseDTO">
+        SELECT
+        sr.* , su.nickname as createUserName
+        FROM
+        sys_role sr
+        LEFT JOIN sys_user su ON sr.create_user = su.user_id
+        WHERE
+        su.is_delete = 0 and sr.is_delete = 0
+        <if test="requestDTO.role != null and requestDTO.role != '' ">
+            and sr.description like CONCAT('%',#{requestDTO.role},'%')
+        </if>
+
+    </select>
+
+
 </mapper>

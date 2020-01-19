@@ -3,10 +3,12 @@ package com.qsq.user.controller;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.qsq.common.auth.annotation.CheckAuth;
 import com.qsq.common.model.ResultResponse;
 import com.qsq.common.uitl.CollectionUtils;
 import com.qsq.user.dto.RoleListRequestDTO;
+import com.qsq.user.dto.RoleListResponseDTO;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import com.qsq.user.po.SysRole;
@@ -42,11 +44,12 @@ public class SysRoleController extends BaseController<SysRoleService, SysRole> {
     }
 
 
-    @PostMapping("list")
+    @PostMapping("/list")
     @CheckAuth("hasRole('admin')")
     public ResultResponse roleList(@RequestBody RoleListRequestDTO requestDTO) {
-        
-        return ResultResponse.success();
+        Page<RoleListResponseDTO> page = super.converterDTOToPageInit(requestDTO);
+        List<RoleListResponseDTO> responseDTOS = service.getRoleList(page,requestDTO);
+        return ResultResponse.success(responseDTOS);
     }
 
 

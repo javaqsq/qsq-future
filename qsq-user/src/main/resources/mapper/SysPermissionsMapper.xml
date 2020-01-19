@@ -2,4 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qsq.user.mapper.SysPermissionsMapper">
 
+    <select id="getPermissionList" resultType="com.qsq.user.dto.PermissionListResponseDTO">
+        select sp.*,
+        su.nickname as createUserName
+        from sys_permissions sp left join sys_user su on sp.create_user = su.user_id
+        where sp.is_delete = 0 and su.is_delete = 0
+        <if test="requestDTO.permission != null and requestDTO.permission != '' ">
+            and sp.description like CONCAT('%',#{requestDTO.permission},'%')
+        </if>
+    </select>
+
+
 </mapper>

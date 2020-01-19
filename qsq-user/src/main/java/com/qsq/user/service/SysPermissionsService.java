@@ -1,7 +1,12 @@
 package com.qsq.user.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.qsq.user.dto.PermissionListRequestDTO;
+import com.qsq.user.dto.PermissionListResponseDTO;
 import com.qsq.user.po.SysPermissions;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +18,13 @@ import com.qsq.user.po.SysPermissions;
  */
 public interface SysPermissionsService extends IService<SysPermissions> {
 
+    /**
+     * 获取权限列表
+     *
+     *
+     * @param page
+     * @param requestDTO
+     * @return
+     */
+    List<PermissionListResponseDTO> getPermissionList(Page<PermissionListResponseDTO> page, PermissionListRequestDTO requestDTO);
 }
