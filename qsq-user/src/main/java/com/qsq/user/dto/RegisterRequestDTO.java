@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -20,7 +21,8 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RegisterRequestDTO {
+public class RegisterRequestDTO implements Serializable {
+
 
     @NotBlank(message = "用户名不能为空")
     private String username;

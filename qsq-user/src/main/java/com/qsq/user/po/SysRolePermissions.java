@@ -25,7 +25,7 @@ public class SysRolePermissions extends BaseEntity {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer userId;
+    private Integer permissionsId;
 
     private Integer roleId;
 

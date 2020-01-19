@@ -5,9 +5,11 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.qsq.common.model.BaseEntity;
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -58,6 +60,8 @@ public class SysUser extends BaseEntity {
     /**
      * 生日
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
     /**

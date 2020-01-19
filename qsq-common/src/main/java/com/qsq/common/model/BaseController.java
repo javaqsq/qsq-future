@@ -29,8 +29,8 @@ public class BaseController<D extends IService<T>, T> {
      */
     protected <P, Q extends PageQuery> Page<P> converterDTOToPageInit(Q q) {
         Page<P> page = new Page<>();
-        page.setCurrent(q.getPage());
-        page.setSize(q.getLimit());
+        page.setCurrent(q.getPage() == null ? 1L : q.getPage());
+        page.setSize(q.getLimit() == null ? 10L : q.getLimit());
         return page;
     }
 }

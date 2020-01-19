@@ -12,6 +12,7 @@ import com.qsq.user.converter.UserModuleConverter;
 import com.qsq.user.dto.RegisterRequestDTO;
 import com.qsq.user.dto.SysUserListRequestDTO;
 import com.qsq.user.dto.SysUserListResponseDTO;
+import com.qsq.user.dto.UserInfoResponseDTO;
 import org.springframework.web.bind.annotation.*;
 import com.qsq.user.po.SysUser;
 import com.qsq.user.service.SysUserService;
@@ -19,7 +20,6 @@ import com.qsq.common.model.BaseController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.util.List;
 
 /**
  * <p>
@@ -44,14 +44,14 @@ public class SysUserController extends BaseController<SysUserService, SysUser> {
     @CheckAuth("hasRole('admin')")
     public ResultResponse list(@RequestBody SysUserListRequestDTO requestDTO) {
         Page<SysUserListResponseDTO> page = super.converterDTOToPageInit(requestDTO);
-        return ResultResponse.successPage(page, service.sysUserList(page, requestDTO));
+        return ResultResponse.successPage(page, service.getSysUserList(page, requestDTO));
     }
 
     @GetMapping("/{id}")
     @CheckAuth("hasRole('admin')")
     public ResultResponse info(@PathVariable("id") Integer id) {
-        SysUser user = service.getById(id);
-        return ResultResponse.success(user);
+        UserInfoResponseDTO userInfo = service.getUserInfo(id);
+        return ResultResponse.success(userInfo);
     }
 
     /**
@@ -84,14 +84,6 @@ public class SysUserController extends BaseController<SysUserService, SysUser> {
             return ResultResponse.fail("注册失败");
         }
     }
-
-
-    @GetMapping("/roleList")
-    public ResultResponse getAllRoleList(){
-
-        return ResultResponse.success() ;
-    }
-
 
 
 }

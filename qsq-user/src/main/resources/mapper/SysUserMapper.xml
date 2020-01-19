@@ -2,34 +2,48 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qsq.user.mapper.SysUserMapper">
 
-    <select id="sysUserList" resultType="com.qsq.user.dto.SysUserListResponseDTO">
+    <select id="getSysUserList" resultType="com.qsq.user.dto.SysUserListResponseDTO">
 
         select su.*
         ,( select u.nickname from sys_user u where u.user_id =su.create_user ) as createUserName
-        ,GROUP_CONCAT( sr.role_name SEPARATOR  ',' ) as roles
-        ,GROUP_CONCAT( sr.description SEPARATOR  ',' ) as roleNames
+        ,GROUP_CONCAT( sr.role_name SEPARATOR ',' ) as roles
+        ,GROUP_CONCAT( sr.description SEPARATOR ',' ) as roleNames
         from sys_user su
         left join sys_user_role sur on su.user_id = sur.user_id and sur.is_delete = 0
         left join sys_role sr on sr.role_id = sur.role_id and sr.is_delete = 0
 
         <where>
             su.is_delete = 0
-        <if test="requestDTO.username != null and  requestDTO.username != '' " >
-          and su.username like CONCAT('%',#{requestDTO.username},'%')
-        </if>
-        <if test="requestDTO.nickname != null and requestDTO.nickname != '' " >
-            and su.nickname like CONCAT('%',#{requestDTO.nickname},'%')
-        </if>
-        <if test="requestDTO.role != null and requestDTO.role != '' ">
-          and EXISTS ( select 1 from sys_user su1
-          left join sys_user_role sur on su1.user_id = sur.user_id
-          left join sys_role sr on sr.role_id = sur.role_id
-          where sr.description = #{requestDTO.role}
-          and su1.user_id = su.user_id )
-        </if>
+            <if test="requestDTO.username != null and  requestDTO.username != '' ">
+                and su.username like CONCAT('%',#{requestDTO.username},'%')
+            </if>
+            <if test="requestDTO.nickname != null and requestDTO.nickname != '' ">
+                and su.nickname like CONCAT('%',#{requestDTO.nickname},'%')
+            </if>
+            <if test="requestDTO.role != null and requestDTO.role != '' ">
+                and EXISTS ( select 1 from sys_user su1
+                left join sys_user_role sur on su1.user_id = sur.user_id
+                left join sys_role sr on sr.role_id = sur.role_id
+                where sr.role_name = #{requestDTO.role}
+                and su1.user_id = su.user_id )
+            </if>
         </where>
         group by su.user_id
         order by su.user_id
+    </select>
+
+    <select id="getUserRoleInfoByUserId" resultType="com.qsq.user.po.SysRole">
+        select  sr.* from sys_user_role sur
+        LEFT JOIN sys_role sr on sur.role_id = sr.role_id and sr.is_delete = 0
+        where sur.user_id = #{id} and sur.is_delete = 0
+
+    </select>
+    <select id="getUserPermissionsByUserId" resultType="com.qsq.user.po.SysPermissions">
+        select sp.* from sys_role_permissions srp
+        LEFT JOIN sys_permissions sp on srp.permissions_id = sp.permissions_id  and sp.is_delete = 0
+        LEFT JOIN sys_user_role sur on sur.role_id = srp.role_id and sur.is_delete = 0
+        where sur.user_id = #{id}
+        and srp.is_delete = 0
     </select>
 
 

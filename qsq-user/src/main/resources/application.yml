@@ -32,6 +32,9 @@ spring:
       max-active: 18
       timeout: 15000
       expire: 600
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    timezone: GMT+8
 mybatis-plus:
   mapperLocations: classpath*:/mapper/**/*.xml
   typeAliasesPackage: com.qsq.user.po
