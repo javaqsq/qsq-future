@@ -32,7 +32,7 @@ public class BaseEntity implements Serializable {
 
     private Date updateTime;
 
-    private String updateUser;
+    private Integer updateUser;
 
     @TableLogic
     private String isDelete;

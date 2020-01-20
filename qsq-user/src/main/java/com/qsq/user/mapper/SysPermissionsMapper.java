@@ -28,4 +28,12 @@ public interface SysPermissionsMapper extends BaseMapper<SysPermissions> {
      * @return
      */
     List<PermissionListResponseDTO> getPermissionList(Page<PermissionListResponseDTO> page, @Param("requestDTO") PermissionListRequestDTO requestDTO);
+
+    /**
+     * 根据角色id获取权限
+     *
+     * @param id
+     * @return
+     */
+    List<SysPermissions> getPermissionListByRoleId(@Param("id") Integer id);
 }

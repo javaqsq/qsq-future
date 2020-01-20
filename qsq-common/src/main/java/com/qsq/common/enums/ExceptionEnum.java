@@ -59,6 +59,14 @@ public enum ExceptionEnum {
     UPLOAD_FILE_SUFFIX_NOT_MATCH(400003, "上传文件格式不对"),
 
 
+    /**
+     * 系统相关
+     */
+    ALREADY_EXIST_PERMISSIONS(500003, "权限已经存在"),
+    PERMISSION_NAME_MISS(500003, "权限名称不存在"),
+    ROLE_NAME_MISS(500003, "角色名称或者描述已经存在"),
+
+
     ;
     private Integer code;
     private String value;

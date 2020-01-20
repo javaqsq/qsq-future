@@ -4,9 +4,23 @@
 
 
     <select id="getUserRoleByUserId" resultType="java.lang.String">
-            select  sr.role_name as role
-            from sys_user_role sur LEFT JOIN sys_role sr on sr.role_id = sur.role_id
-            where sur.user_id = #{id}
+           SELECT
+				CASE
+			WHEN sp.permissions_name IS NULL THEN
+				sr.role_name
+			ELSE
+				CONCAT(
+					sr.role_name,
+					'.',
+					sp.permissions_name
+				)
+			END AS role
+			FROM
+				sys_user_role sur
+			LEFT JOIN sys_role sr ON sr.role_id = sur.role_id
+			LEFT JOIN sys_role_permissions srp ON srp.role_id = sr.role_id
+			LEFT JOIN sys_permissions sp ON sp.permissions_id = srp.permissions_id
+			WHERE sur.user_id = #{id}
     </select>
 
 </mapper>

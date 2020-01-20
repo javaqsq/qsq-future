@@ -22,8 +22,8 @@ public class Test {
     public static void main(String[] args) {
         ExpressionParser parser = new SpelExpressionParser();
         Expression exp = null ;
-        Person person = new Person("1", "jack","admin");
-        exp = parser.parseExpression("hasRole('role')");
+        Person person = new Person("1", "jack","admin.dev");
+        exp = parser.parseExpression("hasRole('admin.dev')");
         StandardEvaluationContext ctx = new StandardEvaluationContext(person);
         CheckPerson value = exp.getValue(ctx, CheckPerson.class);
 

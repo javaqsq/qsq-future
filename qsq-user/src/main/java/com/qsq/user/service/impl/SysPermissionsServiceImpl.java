@@ -32,6 +32,19 @@ public class SysPermissionsServiceImpl extends ServiceImpl<SysPermissionsMapper,
      */
     @Override
     public List<PermissionListResponseDTO> getPermissionList(Page<PermissionListResponseDTO> page, PermissionListRequestDTO requestDTO) {
-        return this.baseMapper.getPermissionList(page,requestDTO) ;
+        return this.baseMapper.getPermissionList(page, requestDTO);
+    }
+
+    /**
+     * 根据角色id获取权限
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public List<SysPermissions> getPermissionListByRoleId(Integer id) {
+        List<SysPermissions> permissions = this.baseMapper.getPermissionListByRoleId(id);
+
+        return null;
     }
 }

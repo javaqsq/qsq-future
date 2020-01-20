@@ -21,10 +21,17 @@ public interface SysPermissionsService extends IService<SysPermissions> {
     /**
      * 获取权限列表
      *
-     *
      * @param page
      * @param requestDTO
      * @return
      */
     List<PermissionListResponseDTO> getPermissionList(Page<PermissionListResponseDTO> page, PermissionListRequestDTO requestDTO);
+
+    /**
+     * 根据角色id获取权限
+     *
+     * @param id
+     * @return
+     */
+    List<SysPermissions> getPermissionListByRoleId(Integer id);
 }

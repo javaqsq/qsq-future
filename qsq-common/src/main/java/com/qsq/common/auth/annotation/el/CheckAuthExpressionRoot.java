@@ -22,7 +22,7 @@ import java.util.List;
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class CheckAuthExpressionRoot {
 
-
+    private final static String SUPER_MANAGER = "admin";
     private final UserOperator userOperator;
 
 
@@ -72,6 +72,9 @@ public class CheckAuthExpressionRoot {
             return AuthExpressionResult.fail(" 用户没有角色数据 ");
         }
         List<String> roleList = Arrays.asList(roles);
+        if (roleList.contains(SUPER_MANAGER)) {
+            return AuthExpressionResult.success();
+        }
         return userRoles.containsAll(roleList) ? AuthExpressionResult.success() : AuthExpressionResult.fail(" 用户没有角色数据 ");
     }
 
@@ -91,7 +94,9 @@ public class CheckAuthExpressionRoot {
         if (CollectionUtils.isEmpty(userRoles)) {
             return AuthExpressionResult.fail(" 用户没有角色数据 ");
         }
-
+        if (roleList.contains(SUPER_MANAGER)) {
+            return AuthExpressionResult.success();
+        }
         boolean checkResult = userRoles.stream()
                 .anyMatch(roleList::contains);
         if (!checkResult) {

@@ -13,4 +13,17 @@
     </select>
 
 
+    <select id="getPermissionListByRoleId" resultType="com.qsq.user.po.SysPermissions">
+
+        select sp.* from sys_role_permissions srp
+        LEFT JOIN sys_role sr on sr.role_id = srp.role_id
+        LEFT JOIN sys_permissions sp on sp.permissions_id = srp.permissions_id
+        where srp.is_delete = 0
+        and sp.is_delete = 0
+        and sr.is_delete = 0
+        and srp.role_id = #{id}
+
+    </select>
+
+
 </mapper>

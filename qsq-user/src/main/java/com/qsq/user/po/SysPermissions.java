@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * <p>
  * 权限表
@@ -20,7 +22,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class SysPermissions extends BaseEntity {
 
-    private static final long serialVersionUID=1L;
+    private static final long serialVersionUID = 1L;
 
     @TableId(value = "permissions_id", type = IdType.AUTO)
     private Integer permissionsId;
@@ -28,6 +30,7 @@ public class SysPermissions extends BaseEntity {
     /**
      * 菜单名称
      */
+    @NotBlank(message = "菜单名称不能为空")
     private String permissionsName;
 
     /**
@@ -38,6 +41,7 @@ public class SysPermissions extends BaseEntity {
     /**
      * 请求地址
      */
+    @NotBlank(message = "请求地址不能为空")
     private String requestUrl;
 
     /**
@@ -53,7 +57,11 @@ public class SysPermissions extends BaseEntity {
     /**
      * 备注
      */
+    @NotBlank(message = "权限描述不能为空")
     private String description;
 
-
+    /**
+     * 请求方式
+     */
+    private String method;
 }
