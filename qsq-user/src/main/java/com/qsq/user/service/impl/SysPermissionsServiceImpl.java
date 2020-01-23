@@ -43,8 +43,6 @@ public class SysPermissionsServiceImpl extends ServiceImpl<SysPermissionsMapper,
      */
     @Override
     public List<SysPermissions> getPermissionListByRoleId(Integer id) {
-        List<SysPermissions> permissions = this.baseMapper.getPermissionListByRoleId(id);
-
-        return null;
+        return this.baseMapper.getPermissionListByRoleId(id);
     }
 }

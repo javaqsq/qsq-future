@@ -62,9 +62,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     @Transactional(rollbackFor = Throwable.class)
     public void insertRoleInfo(RoleOperatorRequestDTO requestDTO, UserInfo userInfo) {
         QueryWrapper<SysRole> query = new QueryWrapper<>();
-        query.eq("role_name", requestDTO.getRoleName())
+        query.eq("role_name", requestDTO.getRole().getRoleName())
                 .or()
-                .eq("description", requestDTO.getDescription());
+                .eq("description", requestDTO.getRole().getDescription());
         SysRole sysRole = this.baseMapper.selectOne(query);
         if (sysRole != null) {
             throw ExceptionEnum.ROLE_NAME_MISS.getException();
@@ -85,11 +85,11 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     @Override
     public void updateRoleInfo(RoleOperatorRequestDTO requestDTO, UserInfo userInfo) {
         QueryWrapper<SysRole> query = new QueryWrapper<>();
-        query.eq("role_name", requestDTO.getRoleName())
+        query.eq("role_name", requestDTO.getRole().getRoleName())
                 .or()
-                .eq("description", requestDTO.getDescription());
+                .eq("description", requestDTO.getRole().getDescription());
         SysRole sysRole = this.baseMapper.selectOne(query);
-        if (sysRole != null && sysRole.getRoleId().compareTo(requestDTO.getRoleId()) != 0) {
+        if (sysRole != null && sysRole.getRoleId().compareTo(requestDTO.getRole().getRoleId()) != 0) {
             throw ExceptionEnum.ROLE_NAME_MISS.getException();
         }
         SysRole entity = UserModuleConverter.converterRoleUpdate(requestDTO, userInfo);

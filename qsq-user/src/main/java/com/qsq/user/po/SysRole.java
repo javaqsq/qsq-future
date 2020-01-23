@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * <p>
  * 角色表
@@ -25,8 +27,10 @@ public class SysRole extends BaseEntity {
     @TableId(value = "role_id", type = IdType.AUTO)
     private Integer roleId;
 
+    @NotBlank(message = "角色名不能为空")
     private String roleName;
 
+    @NotBlank(message = "角色描述")
     private String description;
 
 

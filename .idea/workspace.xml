@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e8ecee9-7bcb-4906-842b-6d02491bd9c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/annotation/el/CheckAuthExpressionRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/annotation/el/CheckAuthExpressionRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/enums/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/enums/ExceptionEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-test/src/main/java/com/qsq/test/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-test/src/main/java/com/qsq/test/controller/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysPermissionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysPermissionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysPermissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysPermissions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysPermissionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysPermissionsMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,105 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SysUserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysUserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-796">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysRoleController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SysRoleController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="120" column="6" lean-forward="true" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysRoleService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysRoleServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1018">
-              <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserModuleConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysRolePermissions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRolePermissions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleInfoResponse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleOperatorRequestDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysPermissionsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-258">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#4014#4015#0" expanded="true" />
-                <element signature="e#4080#4081#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PermissionListRequestDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/PermissionListRequestDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="326">
+              <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -168,8 +62,8 @@
       <file leaf-file-name="SysPermissionsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="638">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -177,159 +71,8 @@
       <file leaf-file-name="SysPermissionsServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysPermissionsMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysPermissionsMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysPermissionsMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysPermissionsMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MybatisPlusConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/config/MybatisPlusConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/BaseEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CheckAuthExpressionRoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/annotation/el/CheckAuthExpressionRoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="95" column="9" lean-forward="true" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="9" />
-              <folding>
-                <element signature="e#1149#1150#0" expanded="true" />
-                <element signature="e#1189#1190#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthExpressionResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/annotation/el/AuthExpressionResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/model/UserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/auth/model/UserOperator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/controller/AuthController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="41" column="60" selection-start-line="41" selection-start-column="56" selection-end-line="41" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthServerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/service/AuthServerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthServerServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/service/impl/AuthServerServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="68" column="76" selection-start-line="68" selection-start-column="76" selection-end-line="68" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthServerMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/mapper/AuthServerMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthServerMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PermissionListResponseDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/PermissionListResponseDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/enums/ResultEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state relative-caret-position="264">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -337,26 +80,122 @@
       <file leaf-file-name="ResultResponse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/ResultResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+            <state relative-caret-position="264">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExceptionEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/enums/ExceptionEnum.java">
+      <file leaf-file-name="SysPermissionsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="66" column="18" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="18" />
+            <state relative-caret-position="726">
+              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysPermissions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysPermissions.java">
+      <file leaf-file-name="AuthServerMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="462">
+              <caret line="21" column="82" selection-start-line="6" selection-start-column="11" selection-end-line="21" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleOperatorRequestDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleInfoResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-gateway/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRoleService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRoleServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="568">
+              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserModuleConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="83" column="64" lean-forward="true" selection-start-line="83" selection-start-column="64" selection-end-line="83" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRoleMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysRoleMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SysRoleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysRoleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="45" selection-start-line="5" selection-start-column="8" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -432,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysUserRoleMapper.java" />
         <option value="$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRolePermissionsService.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRolePermissionsServiceImpl.java" />
@@ -470,7 +308,6 @@
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/PermissionListRequestDTO.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInsertRequestDTO.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java" />
-        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysPermissionsMapper.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysPermissionsMapper.xml" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java" />
@@ -479,10 +316,12 @@
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRolePermissions.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java" />
+        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java" />
+        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRole.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java" />
         <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java" />
       </list>
     </option>
   </component>
@@ -534,13 +373,73 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
               <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-auth-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-auth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-auth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-auth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-auth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsq-future" type="462c0819:PsiDirectoryNode" />
+              <item name="qsq-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qsq-future" type="b2602c69:ProjectViewProjectNode" />
@@ -643,6 +542,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -954,7 +854,10 @@
       <workItem from="1579401623738" duration="5917000" />
       <workItem from="1579434943423" duration="8575000" />
       <workItem from="1579482776925" duration="7663000" />
-      <workItem from="1579515472577" duration="16098000" />
+      <workItem from="1579515472577" duration="16450000" />
+      <workItem from="1579575541996" duration="4641000" />
+      <workItem from="1579603599300" duration="8516000" />
+      <workItem from="1579674953989" duration="4805000" />
     </task>
     <task id="LOCAL-00001" summary="修改权限">
       <created>1578580196145</created>
@@ -1026,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579447066600</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="coding">
+      <created>1579535084895</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1579535084895</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1062,11 +972,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295655000" />
+    <option name="totallyTimeSpent" value="313969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="RestServices" order="4" weight="0.32886267" />
@@ -1080,7 +989,7 @@
       <window_info id="Structure" order="1" sideWeight="0.5034404" side_tool="true" weight="0.17435622" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49731758" weight="0.41857797" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49731758" weight="0.4174312" />
       <window_info anchor="bottom" id="TODO" order="15" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32912844" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -1089,7 +998,7 @@
       <window_info anchor="bottom" id="Run" order="10" weight="0.4896789" />
       <window_info anchor="bottom" id="Spring" order="4" weight="0.32912844" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.40137616" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49655962" visible="true" weight="0.21512875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49655962" visible="true" weight="0.2247854" />
       <window_info anchor="bottom" id="Problems" order="16" weight="0.32912844" />
       <window_info anchor="right" id="Bean Validation" order="7" />
       <window_info id="Web" order="2" sideWeight="0.5034404" side_tool="true" weight="0.18401287" />
@@ -1133,14 +1042,8 @@
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="69" />
+      <option name="time" value="70" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1188,27 +1091,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="38" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/java/com/qsq/auth/po/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="60" selection-start-line="60" selection-end-line="61" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/PageQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1234,9 +1116,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" selection-start-line="16" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1244,9 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,20 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="75" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysRoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="92" selection-start-line="29" selection-start-column="92" selection-end-line="29" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysRoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1286,20 +1148,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/ResultResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/PermissionListResponseDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1352,13 +1204,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysUserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-796">
@@ -1402,12 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="1215" column="17" selection-start-line="1215" selection-start-column="17" selection-end-line="1215" selection-end-column="17" />
-          <folding>
-            <element signature="e#46394#46395#0" expanded="true" />
-            <element signature="e#46458#46459#0" expanded="true" />
-            <element signature="e#47036#47037#0" expanded="true" />
-            <element signature="e#47092#47093#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1415,23 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="34" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1463,16 +1285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/enums/ExceptionEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1484,14 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding>
-            <element signature="e#2020#2021#0" expanded="true" />
-            <element signature="e#2070#2071#0" expanded="true" />
-            <element signature="e#5062#5063#0" expanded="true" />
-            <element signature="e#5111#5112#0" expanded="true" />
-            <element signature="e#6477#6478#0" expanded="true" />
-            <element signature="e#6529#6530#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1530,17 +1334,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-auth-server/src/main/resources/mapper/AuthServerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="82" selection-start-line="6" selection-start-column="11" selection-end-line="21" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/mapper/SysRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/resources/mapper/SysRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="45" selection-start-line="5" selection-start-column="8" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-common/src/main/java/com/qsq/common/model/ResultResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleInfoResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysPermissionsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysPermissionsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/SysRoleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="414">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/po/SysRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/dto/RoleOperatorRequestDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="506">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1549,33 +1440,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/converter/UserModuleConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="66" column="49" selection-start-line="66" selection-start-column="49" selection-end-line="66" selection-end-column="49" />
+        <state relative-caret-position="502">
+          <caret line="83" column="64" lean-forward="true" selection-start-line="83" selection-start-column="64" selection-end-line="83" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/service/impl/SysRoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1018">
-          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysPermissionsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-258">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#4014#4015#0" expanded="true" />
-            <element signature="e#4080#4081#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qsq-user/src/main/java/com/qsq/user/controller/SysRoleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="120" column="6" lean-forward="true" selection-start-line="120" selection-start-column="6" selection-end-line="120" selection-end-column="6" />
+        <state relative-caret-position="568">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
         </state>
       </provider>
     </entry>

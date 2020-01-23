@@ -19,15 +19,9 @@ import java.util.List;
 @Data
 public class RoleOperatorRequestDTO implements Serializable {
 
-    private Integer roleId;
+    private SysRole role ;
 
-    @NotBlank(message = "角色名不能为空")
-    private String roleName;
-
-    @NotBlank(message = "角色描述")
-    private String description;
-
-    List<SysPermissions> permissions;
+    private List<SysPermissions> permissions;
 
 
 }

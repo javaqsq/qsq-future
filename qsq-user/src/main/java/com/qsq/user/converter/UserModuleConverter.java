@@ -57,8 +57,8 @@ public class UserModuleConverter {
      */
     public static SysRole converterRoleInsert(RoleOperatorRequestDTO requestDTO, UserInfo userInfo) {
         SysRole sysRole = new SysRole();
-        sysRole.setRoleName(requestDTO.getRoleName());
-        sysRole.setDescription(requestDTO.getDescription());
+        sysRole.setRoleName(requestDTO.getRole().getRoleName());
+        sysRole.setDescription(requestDTO.getRole().getDescription());
         sysRole.setCreateTime(new Date());
         sysRole.setCreateUser(userInfo.getUserId());
         return sysRole;
@@ -80,9 +80,9 @@ public class UserModuleConverter {
 
     public static SysRole converterRoleUpdate(RoleOperatorRequestDTO requestDTO, UserInfo userInfo) {
         SysRole sysRole = new SysRole();
-        sysRole.setRoleId(requestDTO.getRoleId());
-        sysRole.setRoleName(requestDTO.getRoleName());
-        sysRole.setDescription(requestDTO.getDescription());
+        sysRole.setRoleId(requestDTO.getRole().getRoleId());
+        sysRole.setRoleName(requestDTO.getRole().getRoleName());
+        sysRole.setDescription(requestDTO.getRole().getDescription());
         sysRole.setUpdateTime(new Date());
         sysRole.setUpdateUser(userInfo.getUserId());
         return sysRole;
