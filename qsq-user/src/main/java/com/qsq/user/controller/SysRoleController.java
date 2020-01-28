@@ -14,7 +14,9 @@ import com.qsq.user.dto.RoleOperatorRequestDTO;
 import com.qsq.user.dto.RoleListRequestDTO;
 import com.qsq.user.dto.RoleListResponseDTO;
 import com.qsq.user.po.SysPermissions;
+import com.qsq.user.po.SysRolePermissions;
 import com.qsq.user.service.SysPermissionsService;
+import com.qsq.user.service.SysRolePermissionsService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -40,6 +42,9 @@ public class SysRoleController extends BaseController<SysRoleService, SysRole> {
 
     @Autowired
     private SysPermissionsService permissionsService;
+
+    @Autowired
+    private SysRolePermissionsService rolePermissionsService;
 
     /**
      * 权限列表下拉框
@@ -126,6 +131,9 @@ public class SysRoleController extends BaseController<SysRoleService, SysRole> {
     @CheckAuth("hasRole('admin')")
     public ResultResponse delete(@PathVariable("id") Integer id) {
         service.removeById(id);
+        QueryWrapper<SysRolePermissions> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("role_id", id);
+        rolePermissionsService.remove(queryWrapper);
         return ResultResponse.returnByEnum(ResultEnum.POJO_DELETE_SUCCESS);
     }
 

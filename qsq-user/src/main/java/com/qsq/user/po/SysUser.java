@@ -11,6 +11,8 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * <p>
  * 用户表
@@ -34,11 +36,13 @@ public class SysUser extends BaseEntity {
     /**
      * 用户名
      */
+    @NotBlank(message = "用户名不能为空")
     private String username;
 
     /**
      * 密码
      */
+    @NotBlank(message = "密码不能为空")
     private String password;
 
 
@@ -55,6 +59,7 @@ public class SysUser extends BaseEntity {
     /**
      * 手机号码
      */
+    @NotBlank(message = "手机号码不能为空")
     private String mobile;
 
     /**

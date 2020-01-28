@@ -2,9 +2,9 @@ package com.qsq.common.model;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 
 /**
@@ -33,4 +33,9 @@ public class BaseController<D extends IService<T>, T> {
         page.setSize(q.getLimit() == null ? 10L : q.getLimit());
         return page;
     }
+
+    protected boolean isHaveAdminRole(List<String> roles) {
+        return roles.contains("admin");
+    }
+
 }

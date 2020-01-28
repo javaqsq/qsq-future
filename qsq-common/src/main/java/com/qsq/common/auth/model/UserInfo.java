@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,7 +32,7 @@ public class UserInfo {
     /**
      * 角色
      */
-    private List<String> roles;
+    private List<String> roles = new ArrayList<>();
 
     /**
      * 版本号控制当前jwt的用户信息是否有效

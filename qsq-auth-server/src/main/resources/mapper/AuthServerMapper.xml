@@ -17,10 +17,10 @@
 			END AS role
 			FROM
 				sys_user_role sur
-			LEFT JOIN sys_role sr ON sr.role_id = sur.role_id
-			LEFT JOIN sys_role_permissions srp ON srp.role_id = sr.role_id
-			LEFT JOIN sys_permissions sp ON sp.permissions_id = srp.permissions_id
-			WHERE sur.user_id = #{id}
+			LEFT JOIN sys_role sr ON sr.role_id = sur.role_id and sr.is_delete = 0
+			LEFT JOIN sys_role_permissions srp ON srp.role_id = sr.role_id and srp.is_delete = 0
+			LEFT JOIN sys_permissions sp ON sp.permissions_id = srp.permissions_id and sp.is_delete = 0
+			WHERE sur.user_id = #{id} and sur.is_delete = 0
     </select>
 
 </mapper>
