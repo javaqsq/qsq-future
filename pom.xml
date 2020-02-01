@@ -27,6 +27,7 @@
         <module>qsq-order</module>
         <module>qsq-auth-server</module>
         <module>qsq-file</module>
+        <module>qsq-blog</module>
     </modules>
 
 
@@ -49,20 +50,17 @@
         </dependency>
 
 
-
-
-
         <!-- 网络安全相关 断路器 , 熔断 , 限流  -->
         <!--<dependency>-->
-            <!--<groupId>com.alibaba.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
+        <!--<groupId>com.alibaba.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
         <!--</dependency>-->
 
 
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-devtools</artifactId>-->
-            <!--<optional>true</optional>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-devtools</artifactId>-->
+        <!--<optional>true</optional>-->
         <!--</dependency>-->
 
     </dependencies>

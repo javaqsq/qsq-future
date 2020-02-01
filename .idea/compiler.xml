@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="qsq-auth-server" />
+        <module name="qsq-blog" />
         <module name="qsq-common" />
         <module name="qsq-file" />
         <module name="qsq-gateway" />
