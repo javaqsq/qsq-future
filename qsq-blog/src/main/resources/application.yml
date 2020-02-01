@@ -1,0 +1,49 @@
+server:
+  port: 29090
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+      name: blog-module
+  datasource:
+    name: mytest
+    url: jdbc:mysql://127.0.0.1:3306/springboot?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+#    mysql 8.0.x
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    poolPreparedStatements: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    timezone: GMT+8
+mybatis-plus:
+  mapperLocations: classpath*:/mapper/**/*.xml
+  typeAliasesPackage: com.qsq.blog.po
+  global-config:
+    db-config:
+      column-underline: true
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+#      table-prefix: ssm_
+    refresh: true
+  # mybatis \u539F\u59CB\u914D\u7F6E
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+logging:
+  config: classpath:config/log4j2-dev.xml
+  path: log
+
+jwt:
+  #\u957F\u5EA6\u4E0D\u80FD\u592A\u5C0F
+  secret: qsqbbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrsssttt
+  # \u6709\u6548\u671F\uFF0C\u5355\u4F4D\u79D2\uFF0C\u9ED8\u8BA42\u5468
+  expire-time-in-second: 1209600
