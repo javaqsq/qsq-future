@@ -7,18 +7,32 @@ package com.qsq;
  * No, again
  * 〈自动生成文件的配置文件〉
  */
-public class CodeProperties {
+class CodeProperties {
 
-    public static final String dbUrl = "jdbc:mysql://127.0.0.1:3306/springboot?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true";
-    public static final String dbUsername = "root";
-    public static final String dbPassWord = "123456";
-    public static final String baseControllerClassName ="com.qsq.common.model.BaseController" ; //控制层的继承类BaseController
-    public static final String superEntityClass ="com.qsq.common.model.BaseEntity" ;
-    public static final String packageName = "com.qsq.user"; //生成后的包名
-//    public static final String tableName ="user_order";
-    public static final String[] tableName ={"sys_role","sys_user_role","sys_permissions","sys_role_permissions"};
-    public static final String temPlateController ="templates/controller.java"; //控制层的模板名称
-    public static final String[] superEntityColumns ={"create_time","create_user","update_time","update_user","version","is_delete"};
-    public static final String LogicDeleteFieldName ="del_flag";
-    public static final String OutputDir = "E:\\java-code\\generator-code" ;
+    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/springboot?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true";
+    static final String DB_USERNAME = "root";
+    static final String DB_PASS_WORD = "123456";
+    /**
+     * 控制层的继承类BaseController
+     */
+    static final String BASE_CONTROLLER_CLASS_NAME = "com.qsq.common.model.BaseController";
+    static final String SUPER_ENTITY_CLASS = "com.qsq.common.model.BaseEntity";
+    /**
+     * 生成后的包名
+     */
+    static final String PACKAGE_NAME = "com.qsq.user";
+    /**
+     * 需要生成的表
+     */
+    static final String[] TABLE_NAME = {"sys_role", "sys_user_role", "sys_permissions", "sys_role_permissions"};
+    /**
+     * 控制层的模板名称
+     */
+    static final String TEM_PLATE_CONTROLLER = "templates/controller.java";
+    /**
+     * 基本字段
+     */
+    static final String[] SUPER_ENTITY_COLUMNS = {"create_time", "create_user", "update_time", "update_user", "version", "is_delete"};
+    static final String LOGIC_DELETE_FIELD_NAME = "del_flag";
+    static final String OUTPUT_DIR = "E:\\java-code\\generator-code";
 }

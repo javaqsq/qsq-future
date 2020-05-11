@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.Test;
 import com.mysql.cj.jdbc.Driver;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,7 +19,7 @@ import java.util.Map;
  * No, again
  * 〈〉
  */
-public class GeneratorMain {
+public class GeneratorMainTest {
 
     /**
      * 是否强制带上注解
@@ -41,43 +42,52 @@ public class GeneratorMain {
 
     @Test
     public void generateCode() {
-        String packageName = CodeProperties.packageName;
+        String packageName = CodeProperties.PACKAGE_NAME;
         enableTableFieldAnnotation = false;
         tableIdType = null;
-        generateByTables(packageName, CodeProperties.tableName);
+        generateByTables(packageName, CodeProperties.TABLE_NAME);
 
     }
 
-    public void generateByTables(String packageName, String... tableNames) {
+    private void generateByTables(String packageName, String... tableNames) {
         GlobalConfig config = new GlobalConfig();
-        String dbUrl = CodeProperties.dbUrl;
+        String dbUrl = CodeProperties.DB_URL;
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL)
                 .setUrl(dbUrl)
-                .setUsername(CodeProperties.dbUsername)
-                .setPassword(CodeProperties.dbPassWord)
+                .setUsername(CodeProperties.DB_USERNAME)
+                .setPassword(CodeProperties.DB_PASS_WORD)
                 .setDriverName(Driver.class.getName());
         StrategyConfig strategyConfig = new StrategyConfig();
         strategyConfig
                 .setCapitalMode(true)
-                .setEntityLombokModel(true) // 设置实体类是否需要 lombok 属性
+                /*
+                设置实体类是否需要 lombok 属性
+                 */
+                .setEntityLombokModel(true)
                 .setRestControllerStyle(true)
-                .setLogicDeleteFieldName(CodeProperties.LogicDeleteFieldName)
+                .setLogicDeleteFieldName(CodeProperties.LOGIC_DELETE_FIELD_NAME)
                 // .setDbColumnUnderline(true) 改为如下 2 个配置
                 .setNaming(NamingStrategy.underline_to_camel)
                 .setColumnNaming(NamingStrategy.underline_to_camel)
+                /*
+                  test_id -> id, test_type -> type
+                 */
                 .setEntityTableFieldAnnotationEnable(enableTableFieldAnnotation)
-                .setFieldPrefix(fieldPrefix)//test_id -> id, test_type -> type
-                .setInclude(tableNames)// 修改替换成你需要的表名，多个表名传数组
-                .setSuperControllerClass(CodeProperties.baseControllerClassName)
-                .setSuperEntityClass(CodeProperties.superEntityClass)
-                .setSuperEntityColumns(CodeProperties.superEntityColumns)
+                .setFieldPrefix(fieldPrefix)
+                /*
+                  修改替换成你需要的表名，多个表名传数组
+                 */
+                .setInclude(tableNames)
+                .setSuperControllerClass(CodeProperties.BASE_CONTROLLER_CLASS_NAME)
+                .setSuperEntityClass(CodeProperties.SUPER_ENTITY_CLASS)
+                .setSuperEntityColumns(CodeProperties.SUPER_ENTITY_COLUMNS)
 //                .setSuperServiceImplClass(CodeProperties.SuperServiceClass)
         ;
         config.setActiveRecord(false)
                 .setIdType(tableIdType)
-                .setAuthor("qsq")
-                .setOutputDir(CodeProperties.OutputDir)
+                .setAuthor("QSQ")
+                .setOutputDir(CodeProperties.OUTPUT_DIR)
                 .setFileOverride(true)
                 .setDateType(DateType.ONLY_DATE)
 
@@ -88,13 +98,13 @@ public class GeneratorMain {
         }
         //指定自定义模板路径，注意不要带上.ftl/.vm, 会根据使用的模板引擎自动识别
         TemplateConfig templateConfig = new TemplateConfig()
-                .setController(CodeProperties.temPlateController);
+                .setController(CodeProperties.TEM_PLATE_CONTROLLER);
         InjectionConfig injectionConfig = new InjectionConfig() {
             //自定义属性注入:abc
             //在.vm/ftl模板中，通过${cfg.abc}获取属性
             @Override
             public void initMap() {
-                Map<String, Object> map = new HashMap<String, Object>();
+                Map<String, Object> map = new HashMap<>(1);
                 this.setMap(map);
             }
         };
